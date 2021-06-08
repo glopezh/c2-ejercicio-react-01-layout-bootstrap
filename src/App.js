@@ -32,6 +32,7 @@ function App() {
           </p>
         </main>
         <aside className="sidebar col-12 col-sm-5 col-md-4 py-4">
+          
           <section className="listado">
             <h3>Categorías</h3>
             <ul className="list-unstyled">
@@ -41,6 +42,7 @@ function App() {
               <li>Noticias de espectáculos</li>
             </ul>
           </section>
+
           <section className="listado">
             <h3>Otras cosas</h3>
             <ul className="list-unstyled">
@@ -49,6 +51,7 @@ function App() {
               <li>Talycual</li>
             </ul>
           </section>
+
         </aside>
       </div>
       <footer className = "pie text-white row align-items-center">
