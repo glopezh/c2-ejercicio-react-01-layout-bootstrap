@@ -1,6 +1,30 @@
 function App() {
-  const titulo = "Cosetes";
-  const claseCopyright = "true";
+  /*Una variable que contenga el titular de la noticia.
+- Una variable que contenga el cuerpo de la noticia.
+- Una variable que contenga un array de categorías.
+- Una variable que contenga un array de "otras cosas".
+- Una variable que contenga un valor booleano,
+indicando si se debe imprimir el copyright en el footer o no.Si está a`true`,
+el texto del footer debe ser éste:
+`Texto del footer - Ningún derecho reservado, copia lo que quieras`.*/
+  const titular = "Titular de noticias";
+  const cuerpoNoticia = [
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit.Excepturinumquam, iusto omnis minima corrupti est officiis natus nam,adipisci commodi quo autem magnam sequi magni odio soluta temporibusvelit quas!",
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio sequi, dolorum autem alias commodi molestiae facere quibusdam beatae nulla error, dignissimos, libero vitae ratione porro.Delectusdolorem ad non esse."
+  ]
+  const categorias = [
+    "Noticias de deporte",
+    "Noticias de ocio",
+    "Noticias de política",
+    "Noticias de espectaculos",
+  ];
+  const otrasCosas = [
+    "Nosequé",
+    "Nosecuánto",
+    "Talycual",
+  ]
+
+  const copyright = "true";
 
   return (
 <>
@@ -18,44 +42,34 @@ function App() {
       <div className="contenedor-principal row">
         <main className="principal col-12 col-sm-7 col-md-8 py-4">
           <h2>Titular de la noticia</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-            numquam, iusto omnis minima corrupti est officiis natus nam,
-            adipisci commodi quo autem magnam sequi magni odio soluta temporibus
-            velit quas!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio
-            sequi, dolorum autem alias commodi molestiae facere quibusdam beatae
-            nulla error, dignissimos, libero vitae ratione porro. Delectus
-            dolorem ad non esse.
-          </p>
+          <p>{cuerpoNoticia[0]}</p>
+          <p>{cuerpoNoticia[1]}</p>
         </main>
         <aside className="sidebar col-12 col-sm-5 col-md-4 py-4">
-          
-          <section className="listado">
+
+            <section className="listado center-style">
             <h3>Categorías</h3>
-            <ul className="list-unstyled">
-              <li>Noticias de deporte</li>
-              <li>Noticias de ocio</li>
-              <li>Noticias de política</li>
-              <li>Noticias de espectáculos</li>
+              <ul className="list-unstyled">
+                <li>{categorias[0]}</li>
+                <li>{categorias[1]}</li>
+                <li>{categorias[2]}</li>
+                <li>{categorias[3]}</li>
             </ul>
           </section>
 
-          <section className="listado">
+          <section className="listado center-style">
             <h3>Otras cosas</h3>
             <ul className="list-unstyled">
-              <li>Nosequé</li>
-              <li>Nosecuánto</li>
-              <li>Talycual</li>
+              <li>{otrasCosas[0]}</li>
+              <li>{otrasCosas[1]}</li>
+              <li>{otrasCosas[2]}</li>
             </ul>
           </section>
 
         </aside>
       </div>
-      <footer className = "pie text-white row align-items-center">
-        <p className ="col text-center">Texto del footer</p>
+        <footer className= "pie text-white row text-center align-items-center" >
+          <p className="col text-center"> <span className={copyright}> Texto del footer - Ningún derecho reservado, copia lo que quieras </span></p>
       </footer>
       </div>
     </>

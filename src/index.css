@@ -38,3 +38,13 @@ code {
 .pie p {
   margin: 0;
 }
+
+span.false
+{
+  color:#2d3142;
+}
+
+span.true
+{
+  color:#d8d5db;
+}
